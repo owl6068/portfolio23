@@ -219,6 +219,11 @@
   // background-image: linear-gradient(90deg, rgba(0,0,0,.2) 2px, transparent 2px), linear-gradient(rgba(0,0,0,.2) 2px, transparent 2px); transition: .3s;
   // background-size: 44px 44px; 
   // background-position: center;
+  &.aos-animate{
+    .inner .skill-list li:nth-child(1){animation: downAni .2s .3s both;}
+    .inner .skill-list li:nth-child(2){animation: downAni .4s .4s both;}
+    .inner .skill-list li:nth-child(3){animation: downAni .8s .4s both;}
+  }
   .inner{
     position: relative; z-index: 1; flex-direction: column;
     .about-list{
@@ -344,6 +349,10 @@
       .skill-list li > div:nth-child(1) .img-box{justify-content: center;}
     }
   }
+}
+@keyframes downAni {
+  0%{opacity: 0; transform: translateY(-50%);}
+  100%{opacity: 1; transform: translateY(0);}
 }
 [data-aos=flip-left]{ transform: rotateY(90deg);}
 
@@ -525,11 +534,14 @@
 
 //contact
 .section4{
-  position: relative; display: flex; align-items: center; justify-content: center; padding: 100px; transition: .3s;
-  &::before{content: ""; position: absolute; left: 0%; top: 50%; transform: translate(-50% , -50%); width: 1500px; height: 1500px; border-radius: 50em; background-color: $red; box-shadow: $boxShadow;}
   .inner{
-    flex-direction: column; justify-content: space-between; align-items: center; padding: 50px; min-height: 100%; box-shadow: $boxShadow; background-color: $wh;
-    > .d-flex{flex: 1; width: 100%; align-items: center; justify-content: center; padding: 0 20px;}
+    align-items: center; justify-content: center; transition: .3s;
+    &::before{content: ""; position: absolute; left: 0%; top: 50%; transform: translate(-50% , -50%); width: 1500px; height: 1500px; border-radius: 50em; background-color: $red; box-shadow: $boxShadow; transition: .3s; z-index: 0;}
+    &.aos-animate{
+      &::before{animation: PcCircleAni .5s .3s both;}
+    }
+    .contant{position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 50px; min-height: 100%; width: 100%; box-shadow: $boxShadow; background-color: $wh; z-index: 1;}
+    .box{flex: 1; width: 100%; align-items: center; justify-content: center; padding: 0 20px;}
     .my-info{ 
       flex: 4; padding: 100px 3vw; border: 2px solid; border-right: 0;
       li{
@@ -564,18 +576,21 @@
       }
     }
   }
+
   @media screen and (max-width:1000px) {
-    padding: 50px;
     .inner .form-list ul{
       padding: 40px 40px 60px;
     }
   }
   @media screen and (max-width:840px) {
-    padding: 0; display: block;
-    &::before{width: 500px; height: 500px; border-radius: 50em; left: 50%; top: -360px; transform: translate(-50%,0);}
     .inner{
-      padding:50px 0 0; min-height: 100vh;  background-color: transparent;
-      > .d-flex{flex-direction: column; padding: 0;}
+      padding: 0; display: block; 
+      &::before{width: 500px; height: 500px; border-radius: 50em; left: 50%; top: -360px; transform: translate(-50%,0);}
+      &.aos-animate{
+        &::before{animation: MoCircleAni .5s .3s both;}
+      }
+      .contant{padding:50px 0 0; min-height: 100vh; background-color: transparent; box-shadow: none;}
+      .box{flex-direction: column; padding: 0;}
       .my-info{
         flex: 2; width: 100%; border: 0; padding: 0 0 30px; text-align: center;
         li{
@@ -603,6 +618,14 @@
 @keyframes circleAni1{
   0%{transform: translate(-50%,-50%) rotate(0);}
   100%{transform: translate(-50%,-50%) rotate(360deg);}
+}
+@keyframes PcCircleAni {
+  0%{left: -100%;}
+  100%{left: 0%;}
+}
+@keyframes MoCircleAni {
+  0%{top: -100%;}
+  100%{top: -360px;}
 }
 
 //footer

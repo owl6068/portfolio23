@@ -15,14 +15,14 @@
 
   <meta property="og:site_name" content="김미소의 PortFolio" />
   <meta property="og:title" content="김미소의 PortFolio" />
-  <meta property="og:description" content="gitHub 이용한 포트폴리오 사이트 입니다." />
+  <meta property="og:description" content="gitHub를 이용한 김미소 포트폴리오 사이트." />
   <meta property="og:image" content="./images/img/ms.png">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://owl6068.github.io/portfolio/" />
 
   <meta name="og:site_name" content="김미소의 PortFolio" />
   <meta name="og:title" content="김미소의 PortFolio" />
-  <meta name="og:description" content="gitHub 이용한 포트폴리오 사이트 입니다." />
+  <meta name="og:description" content="gitHub를 이용한 김미소 포트폴리오 사이트." />
   <meta name="og:image" content="./images/img/ms.png">
   <meta name="og:type" content="website" />
   <meta name="og:url" content="https://owl6068.github.io/portfolio/" />
@@ -83,7 +83,7 @@
       </nav>
     </aside>
     <section class="section section2 ac-sec" data-aos="about">
-      <div class="inner">
+      <div class="inner" data-aos="zoom-in" data-aos-delay="300">
         <h2 class="tit font-bold">About</h2>
         <div class="relative about-list">
           <div class="about-text">
@@ -144,7 +144,7 @@
       </div>
     </section>
     <section class="section section3 ac-sec" data-aos="career">
-      <div class="inner">
+      <div class="inner"  data-aos="zoom-in" data-aos-delay="300">
         <div>
           <h2 class="tit font-bold">Career</h2>
           <div class="swiper career-swiper">
@@ -550,41 +550,43 @@
       </div>
     </section>
     <section class="section section4 ac-sec" id="contantc">
-      <div class="inner">
-        <h2 class="tit font-bold">Contact</h2>
-        <div class="d-flex">
-          <ul class="my-info">
-            <!-- <li>
-              "모든 일에는 의사소통과 능력, 효율성으로 많은 부분을 타협하며 어려을 이겨내며 진행해 왔습니다.<br />
-              앞으로도 능력을 키우고, 효율성있게 계획하며, 존중하는 마음의 의사소통으로 열정적으로 근무하곘습니다."
-            </li> -->
-            <li><span class="xi xi-user"></span> <span>Kim mi so</span></li>
-            <li><span class="xi xi-call"></span> <a href="tel:010-3386-7068">010.3386.7068</a></li>
-            <li><span class="xi xi-mail-o"></span> <span>owl6068@naver.com</span></li>
-          </ul>
-          <div class="form-list">
-            <ul>
-              <li>
-                <input type="text" id="fullName" placeholder="이름을 적어주세요" required>
-                <p class="error"></p>
-              </li>
-              <li>
-                <input type="tel" id="phoneNumber" placeholder="'-' 없이 숫자만 적어주세요" required maxlength="13"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, '$1-$2-$3').replace(/(\-{1,2})$/g, '');">
-                <p class="error"></p>
-              </li>
-              <li>
-                <input type="email" id="email_id" placeholder="이메일을 알려주세요">
-                <p class="error"></p>
-              </li>
-              <li>
-                <textarea id="message" placeholder="저에게 하고 싶은 말씀이 있으시면 편하게 말씀해 주세요. (10자 이상 작성)" required></textarea>
-                <p class="error"></p>
-              </li>
-              <li>
-                <button onclick="SendMail()">보내기</button>
-              </li>
+      <div class="inner"  data-aos="zoom-in" data-aos-delay="300">
+        <div class="contant">
+          <h2 class="tit font-bold">Contact</h2>
+          <div class="box d-flex">
+            <ul class="my-info">
+              <!-- <li>
+                "모든 일에는 의사소통과 능력, 효율성으로 많은 부분을 타협하며 어려을 이겨내며 진행해 왔습니다.<br />
+                앞으로도 능력을 키우고, 효율성있게 계획하며, 존중하는 마음의 의사소통으로 열정적으로 근무하곘습니다."
+              </li> -->
+              <li><span class="xi xi-user"></span> <span>Kim mi so</span></li>
+              <li><span class="xi xi-call"></span> <a href="tel:010-3386-7068">010.3386.7068</a></li>
+              <li><span class="xi xi-mail-o"></span> <span>owl6068@naver.com</span></li>
             </ul>
+            <div class="form-list">
+              <ul>
+                <li>
+                  <input type="text" id="fullName" placeholder="이름을 적어주세요" required>
+                  <p class="error"></p>
+                </li>
+                <li>
+                  <input type="tel" id="phoneNumber" placeholder="'-' 없이 숫자만 적어주세요" required maxlength="13"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, '$1-$2-$3').replace(/(\-{1,2})$/g, '');">
+                  <p class="error"></p>
+                </li>
+                <li>
+                  <input type="email" id="email_id" placeholder="이메일을 알려주세요">
+                  <p class="error"></p>
+                </li>
+                <li>
+                  <textarea id="message" placeholder="저에게 하고 싶은 말씀이 있으시면 편하게 말씀해 주세요. (10자 이상 작성)" required></textarea>
+                  <p class="error"></p>
+                </li>
+                <li>
+                  <button onclick="SendMail()">보내기</button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -593,7 +595,7 @@
       <div class="bg-star-wrap">
         <div class="star"></div>
       </div>
-      <div>
+      <div  data-aos="zoom-in" data-aos-delay="300">
         <div class="font">Thank You.</div>
         <q>
           "자기 자신을 믿고, 자신의 역량을 발휘하라. 세상은 당신이 펼칠 힘에 놀라울 것이다."<br />
