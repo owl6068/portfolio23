@@ -139,7 +139,7 @@
 
 // 사이드바
 .snb{
-  position: fixed; right: 0%; top: 50%; background-color:$bk; z-index: 10; transition: .5s; border-radius: 20px 0 0 20px; box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  position: fixed; right: -100%; top: 50%; background-color:$bk; z-index: 10; transition: .5s; border-radius: 20px 0 0 20px; box-shadow: 0 1px 10px rgba(0,0,0,.2);
   &.open{right: 0%;  opacity: 1;}
   &.mo-nav{
     opacity: .5; right: -43px;
@@ -507,7 +507,7 @@
           .career-wrap{
             .btw-flex .btn-detail{line-height: 40px;}
             .img-box{
-              min-height: 180px; height: 3vw;
+              min-height: 200px; height: 50vw;
             }
             .text-box h4{
               font-size: 24px;
@@ -650,7 +650,7 @@
   *{color: $wh;}
   > div:not(.bg-star-wrap){position: relative; z-index: 1;}
   .font{font-family: 'Libre Barcode 39','Cabin Sketch','Monoton'; font-size: 80px; color: $yl;}
-  q{display: block; padding: 10px 0; line-height: 2;}
+  q{display: block; padding: 10px 0; line-height: 1.5;}
   @media screen and (max-width:640px) {
     padding: 60px 20px;
     .font{font-size: 50px;}

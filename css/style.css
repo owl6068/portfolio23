@@ -363,7 +363,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 }
 .snb {
   position: fixed;
-  right: 0%;
+  right: -100%;
   top: 50%;
   background-color: #222;
   z-index: 10;
@@ -1084,8 +1084,8 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     line-height: 40px;
   }
   .section3 .inner > div .swiper .career-wrap .img-box {
-    min-height: 180px;
-    height: 3vw;
+    min-height: 200px;
+    height: 50vw;
   }
   .section3 .inner > div .swiper .career-wrap .text-box h4 {
     font-size: 24px;
@@ -1376,7 +1376,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .footer q {
   display: block;
   padding: 10px 0;
-  line-height: 2;
+  line-height: 1.5;
 }
 @media screen and (max-width: 640px) {
   .footer {
