@@ -30,7 +30,7 @@
      ". . . d d d d ."
      ;
      li{
-      position: relative; border: 6px solid $bk; padding: 5% 16px; min-width: 80px; background-color: $wh;
+      position: relative; border: 6px solid $bk; padding: 5% 16px; min-width: 80px; background-color: $wh; animation: opacity .5s linear both;
       &:not(.pattern){
         display: flex; align-items: center; justify-content: center;
         &::before{
@@ -215,11 +215,6 @@
   // background-image: linear-gradient(90deg, rgba(0,0,0,.2) 2px, transparent 2px), linear-gradient(rgba(0,0,0,.2) 2px, transparent 2px); transition: .3s;
   // background-size: 44px 44px; 
   // background-position: center;
-  &.aos-animate{
-    .inner .skill-list li:nth-child(1){animation: downAni .2s .3s both;}
-    .inner .skill-list li:nth-child(2){animation: downAni .4s .4s both;}
-    .inner .skill-list li:nth-child(3){animation: downAni .8s .4s both;}
-  }
   .inner{
     position: relative; z-index: 1; flex-direction: column;
     .about-list{
@@ -543,7 +538,7 @@
     align-items: center; justify-content: center; transition: .3s;
     &::before{content: ""; position: absolute; left: 0%; top: 50%; transform: translate(-50% , -50%); width: 1500px; height: 1500px; border-radius: 50em; background-color: $red; box-shadow: $boxShadow; transition: .3s; z-index: 0;}
     &.aos-animate{
-      &::before{animation: PcCircleAni .5s .3s both;}
+      &::before{animation: PcCircleAni .8s .3s both;}
     }
     .contant{position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 50px; min-height: 100%; width: 100%; box-shadow: $boxShadow; background-color: $wh; z-index: 1;}
     .box{flex: 1; width: 100%; align-items: center; justify-content: center; padding: 0 20px;}
@@ -593,7 +588,7 @@
       padding: 0; display: block; 
       &::before{width: 500px; height: 500px; border-radius: 50em; left: 50%; transform: translate(-50%,0);}
       &.aos-animate{
-        &::before{animation: MoCircleAni .5s .3s both;}
+        &::before{animation: MoCircleAni .8s .3s both;}
       }
       .contant{padding:50px 0 0; min-height: 100vh; background-color: transparent; box-shadow: none;}
       .box{flex-direction: column; padding: 0;}
