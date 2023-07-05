@@ -189,12 +189,12 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .section1 .title-block li:not(.pattern)::before {
   content: "";
   position: absolute;
-  right: -6px;
-  top: -6px;
-  width: calc(100% + 12px);
-  height: calc(100% + 12px);
-  background-color: #fff;
+  right: 6px;
+  top: 0;
+  height: 100%;
+  background-color: #fefefe;
   opacity: 1;
+  animation: titBg-X 0.2s 0.6s both;
 }
 .section1 .title-block li:not(.pattern) * {
   font-family: "Gasoek One", "Russo One", sans-serif;
@@ -204,10 +204,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   grid-area: a;
   transform-origin: right bottom;
   transform: rotate(5deg);
-  animation: opacity 0.3s 0.8s both;
-}
-.section1 .title-block li:nth-child(1)::before {
-  animation: titBg-X 0.3s 0.8s both;
 }
 .section1 .title-block li:nth-child(2) {
   position: relative;
@@ -231,18 +227,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .section1 .title-block li:nth-child(3) {
   grid-area: b;
   margin: -6px 0;
-  animation: opacity 0.4s 0.8s both;
-}
-.section1 .title-block li:nth-child(3)::before {
-  animation: titBg-X 0.4s 0.8s both;
 }
 .section1 .title-block li:nth-child(4) {
   grid-area: c;
   margin: 0 -6px -6px;
-  animation: opacity 0.6s 0.3s both;
-}
-.section1 .title-block li:nth-child(4)::before {
-  animation: titBg-X 0.6s 0.4s both;
 }
 .section1 .title-block li:nth-child(5) {
   position: relative;
@@ -268,10 +256,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   grid-area: d;
   transform: rotate(-5deg);
   transform-origin: right top;
-  animation: opacity 0.8s 0.5s both;
-}
-.section1 .title-block li:nth-child(6)::before {
-  animation: titBg-X 0.8s 0.5s both;
 }
 @media screen and (max-width: 760px) {
   .section1 .bg-img-box .xi-angle-down {
@@ -311,7 +295,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 }
 @keyframes titBg-X {
   0% {
-    width: calc(100% + 12px);
+    width: calc(100% - 12px);
   }
   100% {
     width: 0;
