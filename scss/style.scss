@@ -139,7 +139,7 @@
 
 // 사이드바
 .snb{
-  position: fixed; right: -100%; top: 50%; background-color:$bk; z-index: 10; transition: .5s; border-radius: 20px 0 0 20px; box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  position: fixed; right: 0%; top: 50%; background-color:$bk; z-index: 10; transition: .5s; border-radius: 20px 0 0 20px; box-shadow: 0 1px 10px rgba(0,0,0,.2);
   &.open{right: 0%;  opacity: 1;}
   &.mo-nav{
     opacity: .5; right: -43px;
@@ -230,7 +230,7 @@
       z-index: 4;
       .about-text{
         padding: 40px 40px 60px; background-color: $wh; border: 20px solid $bk;
-        h2{
+        h1{
           display: flex; align-items: center; padding-bottom: 10px; gap: 30px;
           *{ font-size: 20px; font-weight: bold;}
           .br{display: none;}
@@ -305,10 +305,10 @@
       .about-list{ 
         .about-text{
           padding: 30px 20px; border-width: 10px;
-          h2{
+          h1{
             gap: 20px;
             .br{display: block;}
-            *{font-size: 18px;}
+            *{font-size: 16px;}
             .profile{width: 80px; height: 80px;}
           }
         }
@@ -368,8 +368,12 @@
         height: unset; border-radius: 20px;
         .career-wrap{position: relative; display: flex; align-items: center; justify-content: center; gap: 0 80px; height: 100%; transition: .3s; overflow: hidden; z-index: 1;  transition: .3s;} 
         .img-box{
-          flex: 1; position: relative; padding-top: 30%; width: 100%; background-color: $wh; overflow: hidden; box-shadow: 1px 2px 16px  rgba(255,255,255,.2);
-          img{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 130%; height: auto;}
+          flex: 1; position: relative; padding-top: 30%; width: 100%; background-color: $wh; overflow: hidden; box-shadow: 1px 2px 16px  rgba(255,255,255,.2); background-repeat: repeat; background-size: cover; background-position: top center;
+          &.allra{background-image: url(../images/site/allra.png);}
+          &.kace{background-image: url(../images/site/kace.png);}
+          &.dibi{background-image: url(../images/site/dibi.png);}
+          &.hak{background-image: url(../images/site/hak.png);}
+          &.clone{background-image: url(../images/site/clone.png);}
         }
         .text-box{
           flex: 1; width: 100%;
@@ -473,7 +477,9 @@
           max-width: calc(100vw - 320px); padding: 0 0 50px;
           .career-wrap{
             flex-direction: column;
-            .img-box{padding-top: 50%; box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);}
+            .img-box{
+              flex: unset; padding-top: 0; height: 349px; width: 100%; box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
+            }
             .text-box {
               .date{padding-top: 20px;}
               .desc{padding-top: 10px;}
@@ -500,6 +506,9 @@
           max-width: calc(100vw - 40px);
           .career-wrap{
             .btw-flex .btn-detail{line-height: 40px;}
+            .img-box{
+              min-height: 180px; height: 3vw;
+            }
             .text-box h4{
               font-size: 24px;
               small{padding-left: 6px;}
@@ -585,7 +594,7 @@
   @media screen and (max-width:840px) {
     .inner{
       padding: 0; display: block; 
-      &::before{width: 500px; height: 500px; border-radius: 50em; left: 50%; top: -360px; transform: translate(-50%,0);}
+      &::before{width: 500px; height: 500px; border-radius: 50em; left: 50%; transform: translate(-50%,0);}
       &.aos-animate{
         &::before{animation: MoCircleAni .5s .3s both;}
       }
@@ -625,7 +634,7 @@
 }
 @keyframes MoCircleAni {
   0%{top: -100%;}
-  100%{top: -360px;}
+  100%{top: -340px;}
 }
 
 //footer

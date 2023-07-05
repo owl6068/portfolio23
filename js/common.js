@@ -14,13 +14,13 @@ window.onload = function () {
 
 window.onresize = function () {
   windowSize = window.innerWidth;
-  sideView(windowSize, window.scrollY);
+  snbView(windowSize, window.scrollY);
   AOS.refresh();
 };
 
 window.addEventListener("scroll", function () {
   windowSize = window.innerWidth;
-  sideView(windowSize, window.scrollY);
+  snbView(windowSize, window.scrollY);
   AOS.refresh();
 });
 
@@ -145,6 +145,7 @@ function mainBgAdd() {
 
 let swiper = new Swiper(".career-swiper", {
   slidesPerView: 1,
+  spaceBetween: 10,
   centeredSlides : true,
   loop:true,
   observer: true,

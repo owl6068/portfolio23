@@ -363,7 +363,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 }
 .snb {
   position: fixed;
-  right: -100%;
+  right: 0%;
   top: 50%;
   background-color: #222;
   z-index: 10;
@@ -502,20 +502,20 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   background-color: #fefefe;
   border: 20px solid #222;
 }
-.section2 .inner .about-list .about-text h2 {
+.section2 .inner .about-list .about-text h1 {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
   gap: 30px;
 }
-.section2 .inner .about-list .about-text h2 * {
+.section2 .inner .about-list .about-text h1 * {
   font-size: 20px;
   font-weight: bold;
 }
-.section2 .inner .about-list .about-text h2 .br {
+.section2 .inner .about-list .about-text h1 .br {
   display: none;
 }
-.section2 .inner .about-list .about-text h2 .profile {
+.section2 .inner .about-list .about-text h1 .profile {
   flex-shrink: 0;
   width: 120px;
   height: 120px;
@@ -523,10 +523,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   background: #fefefe url(../images/img/msface.jpg) no-repeat center;
   background-size: contain;
 }
-.section2 .inner .about-list .about-text h2 strong {
+.section2 .inner .about-list .about-text h1 strong {
   position: relative;
 }
-.section2 .inner .about-list .about-text h2 strong::after {
+.section2 .inner .about-list .about-text h1 strong::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -668,16 +668,16 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     padding: 30px 20px;
     border-width: 10px;
   }
-  .section2 .inner .about-list .about-text h2 {
+  .section2 .inner .about-list .about-text h1 {
     gap: 20px;
   }
-  .section2 .inner .about-list .about-text h2 .br {
+  .section2 .inner .about-list .about-text h1 .br {
     display: block;
   }
-  .section2 .inner .about-list .about-text h2 * {
-    font-size: 18px;
+  .section2 .inner .about-list .about-text h1 * {
+    font-size: 16px;
   }
-  .section2 .inner .about-list .about-text h2 .profile {
+  .section2 .inner .about-list .about-text h1 .profile {
     width: 80px;
     height: 80px;
   }
@@ -779,14 +779,24 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   background-color: #fefefe;
   overflow: hidden;
   box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.2);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: top center;
 }
-.section3 .inner > div .swiper-slide .img-box img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 130%;
-  height: auto;
+.section3 .inner > div .swiper-slide .img-box.allra {
+  background-image: url(../images/site/allra.png);
+}
+.section3 .inner > div .swiper-slide .img-box.kace {
+  background-image: url(../images/site/kace.png);
+}
+.section3 .inner > div .swiper-slide .img-box.dibi {
+  background-image: url(../images/site/dibi.png);
+}
+.section3 .inner > div .swiper-slide .img-box.hak {
+  background-image: url(../images/site/hak.png);
+}
+.section3 .inner > div .swiper-slide .img-box.clone {
+  background-image: url(../images/site/clone.png);
 }
 .section3 .inner > div .swiper-slide .text-box {
   flex: 1;
@@ -1042,7 +1052,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     flex-direction: column;
   }
   .section3 .inner > div .swiper .career-wrap .img-box {
-    padding-top: 50%;
+    flex: unset;
+    padding-top: 0;
+    height: 349px;
+    width: 100%;
     box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
   }
   .section3 .inner > div .swiper .career-wrap .text-box .date {
@@ -1069,6 +1082,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   }
   .section3 .inner > div .swiper .career-wrap .btw-flex .btn-detail {
     line-height: 40px;
+  }
+  .section3 .inner > div .swiper .career-wrap .img-box {
+    min-height: 180px;
+    height: 3vw;
   }
   .section3 .inner > div .swiper .career-wrap .text-box h4 {
     font-size: 24px;
@@ -1234,7 +1251,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     height: 500px;
     border-radius: 50em;
     left: 50%;
-    top: -360px;
     transform: translate(-50%, 0);
   }
   .section4 .inner.aos-animate::before {
@@ -1306,7 +1322,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     top: -100%;
   }
   100% {
-    top: -360px;
+    top: -340px;
   }
 }
 .footer {
