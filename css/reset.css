@@ -1,0 +1,57 @@
+/***
+    The new CSS reset - version 1.0.0 // 2023.05.29
+***/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Libre+Barcode+39&family=Monoton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
+
+html, body,
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, textarea,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, input,
+time, mark, audio, video, section, article, aside,footer,nav,main ,header{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	color:inherit;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	font-size: inherit;
+	font-weight: 400;
+	font-style: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+strong,b{font-weight: 900;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{width: 100%; border: 0;}
+a{text-decoration: none;}
+button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+textarea{resize: none; outline: none;}
+*::before,
+*::after{font-family: 'xeicon';}
