@@ -852,12 +852,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   margin-top: 20px;
   width: 100%;
   line-height: 50px;
-  background-color: #ef4536;
+  background-color: #222;
+  border: 1px solid #fefefe;
   text-align: center;
   transition: 0.3s;
-}
-.section3 .inner .swiper-slide .text-box .btw-flex button.btn-detail {
-  background-color: #b9392d;
 }
 .section3 .inner .swiper-slide .text-box .btw-flex .btn-detail:hover {
   background-color: #fefefe;
@@ -867,7 +865,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   transform: translateY(100%);
 }
 .section3 .inner :is(.swiper-button-next, .swiper-button-prev)::after {
-  color: #f4c500;
+  color: #fefefe;
 }
 .section3 .inner .swiper-pagination-bullet {
   background: #fefefe;

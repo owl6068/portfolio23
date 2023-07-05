@@ -396,14 +396,13 @@
         .desc{padding-top: 20px; font-size: 14px;}
         .btw-flex{
           padding-top: 20px; gap: 8px;
-          .btn-detail{margin-top: 20px; width: 100%; line-height: 50px; background-color: $red; text-align: center; transition: .3s;}
-          button.btn-detail{background-color:#b9392d;}
+          .btn-detail{margin-top: 20px; width: 100%; line-height: 50px; background-color: $bk; border: 1px solid $wh; text-align: center; transition: .3s;}
           .btn-detail:hover{background-color: $wh; color: $bk;}
         }
       }
     }
     .swiper-button-next , .swiper-button-prev{transform: translateY(100%);}
-    :is(.swiper-button-next , .swiper-button-prev)::after{color: $yl;}
+    :is(.swiper-button-next , .swiper-button-prev)::after{color: $wh;}
     .swiper-pagination-bullet{background:$wh; width: 10px; height: 10px; margin: 0 6px;}
     .swiper-pagination-bullet-active{transform: scale(1.3);}
   }
