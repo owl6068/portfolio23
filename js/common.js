@@ -170,13 +170,13 @@ let swiper = new Swiper(".career-swiper", {
 });
 
 const btnModalOpen = (select) => {
-  const open = document.querySelector(`.${select}`);
+  const open = document.querySelector(`.modal-wrap.${select}`);
   modalClose();
   body.classList.add('overflow');
   open.classList.add("active");
 };
 const btnModalClose = (select) => {
-  const ani = document.querySelector(`.${select}`);
+  const ani = document.querySelector(`.modal-wrap.${select}`);
   ani.classList.add('closeAni');
   setTimeout(() => {
     modalClose();

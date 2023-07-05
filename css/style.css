@@ -1212,9 +1212,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   width: 100%;
 }
 .section4 .inner .form-list ul li {
-  padding: 20px 0 0;
+  padding: 10px 0 0;
 }
 .section4 .inner .form-list ul li textarea, .section4 .inner .form-list ul li input {
+  display: block;
   background-color: #fefefe;
   width: 100%;
 }
@@ -1232,6 +1233,12 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   color: #fefefe;
   background-color: #222;
   padding: 15px 0;
+}
+.section4 .inner .form-list ul li .error {
+  display: block;
+  color: #ef4536;
+  font-size: 12px;
+  padding-top: 4px;
 }
 .section4 .inner .form-list ul li:first-child {
   padding-top: 0;
@@ -1279,13 +1286,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   }
   .section4 .inner .form-list {
     flex: 10;
-  }
-  .section4 .inner .form-list ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6px;
-    padding-top: 15px;
   }
   .section4 .inner .form-list ul li input {
     padding: 0 10px;

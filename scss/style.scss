@@ -575,11 +575,12 @@
       ul{
         max-width: 600px; padding: 50px; width: 100%;
         li{
-          padding: 20px 0 0;
-          textarea,input{background-color: $wh; width: 100%;}
+          padding: 10px 0 0;
+          textarea,input{display: block; background-color: $wh; width: 100%;}
           input{line-height: 40px; padding: 0 20px;}
           textarea{height: 150px; padding: 20px;}
           button{width: 100%; font-weight: 900; color: $wh; background-color: $bk; padding: 15px 0;}
+          .error{display: block; color: $red; font-size: 12px; padding-top: 4px;}
           &:first-child{padding-top: 0;}
         }
       }
@@ -610,7 +611,6 @@
         flex: 10;
         ul{
           li{
-            display: flex; align-items: center; justify-content: center; padding-top: 6px; padding-top: 15px;
             input{padding: 0 10px;}
             textarea{height: 150px; padding: 10px;}
           }
