@@ -1055,6 +1055,9 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     width: 100%;
     box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
   }
+  .section3 .inner .swiper .career-wrap .text-box {
+    padding-top: 30px;
+  }
   .section3 .inner .swiper .career-wrap .text-box .date {
     padding-top: 20px;
   }
@@ -1083,6 +1086,13 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   .section3 .inner .swiper .career-wrap .img-box {
     min-height: 180px;
     height: 50vw;
+    border-width: 2px;
+  }
+  .section3 .inner .swiper .career-wrap .text-box {
+    padding-top: 20px;
+  }
+  .section3 .inner .swiper .career-wrap .text-box .label:nth-of-type(1) {
+    padding-top: 20px;
   }
   .section3 .inner .swiper .career-wrap .text-box h4 {
     font-size: 24px;

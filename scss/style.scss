@@ -478,6 +478,7 @@
             flex: unset; padding-top: 0; height: 340px; width: 100%; box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
           }
           .text-box {
+            padding-top: 30px;
             .date{padding-top: 20px;}
             .desc{padding-top: 10px;}
             
@@ -502,11 +503,15 @@
           .career-wrap{
             .btw-flex .btn-detail{line-height: 40px;}
             .img-box{
-              min-height: 180px; height: 50vw;
+              min-height: 180px; height: 50vw; border-width: 2px;
             }
-            .text-box h4{
-              font-size: 24px;
-              small{padding-left: 6px;}
+            .text-box{
+              padding-top: 20px;
+              .label:nth-of-type(1){padding-top: 20px;}
+              h4{
+                font-size: 24px;
+                small{padding-left: 6px;}
+              }
             }
           }
         }
