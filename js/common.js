@@ -1,16 +1,14 @@
 let windowSize = window.innerWidth;
 const body = document.querySelector("body");
 
+setTimeout(function () {
+AOS.init(); //scroll ani
+}, 10);
+
 (function () {
   //contact email
   emailjs.init("58XtBpogqDYqSLNAX");
 })();
-
-window.onload = function () {
-  setTimeout(function () {
-    AOS.init(); //scroll ani
-  }, 10);
-};
 
 window.onresize = function () {
   windowSize = window.innerWidth;
