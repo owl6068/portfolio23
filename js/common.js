@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
   AOS.refresh();
 });
 
-mainBgAdd();
+mainBgPaintAdd();
 snbView();
 snbHandler();
 snbSectionMoving();
@@ -96,9 +96,8 @@ function snbSectionMoving() {
   });
 }
 
-function mainBgAdd() {
+function mainBgPaintAdd() {
   let section1 = document.querySelector(".section1");
-  let inner = document.querySelector(".section1 .inner");
   let imgBox = document.querySelector(".section1 .bg-img-box");
   let bgList = [];
   let i = 0;
@@ -112,8 +111,8 @@ function mainBgAdd() {
     //auto
     if (i !== bgList.length) {
       let addSpan = document.createElement("span");
-      addSpan.style.left = Math.floor(Math.random() * (x - 100) + 1) + "px";
-      addSpan.style.top = Math.floor(Math.random() * (y - 100) + 1) + "px";
+      addSpan.style.left = Math.floor(Math.random() * x * 1) + "px";
+      addSpan.style.top = Math.floor(Math.random() * y * 1) + "px";
       let bg = `url(https://owl6068.github.io/msPortFolio/${bgList[i]})`;
       addSpan.style.backgroundImage = bg;
       imgBox.appendChild(addSpan);
@@ -125,14 +124,15 @@ function mainBgAdd() {
 
   section1.onclick = function (e) {
     //click
-    let x = e.pageX - e.target.offsetLeft;
-    let y = e.pageY - e.target.offsetTop;
-
     let addStrong = document.createElement("strong");
-    addStrong.style.left = x + "px";
-    addStrong.style.top = y + "px";
+    
+    let clickX = e.pageX;
+    let clickY = e.pageY;
 
-    let bg = `url(https://owl6068.github.io/msPortFolio/${bgList[Math.floor(Math.random() * bgList.length)]})`;
+    addStrong.style.left = clickX + "px";
+    addStrong.style.top = clickY + "px";
+
+    let bg = `url(https://owl6068.github.io/msPortFolio/${bgList[Math.floor(Math.random() * bgList.length * 1)]})`;
     addStrong.style.backgroundImage = bg;
 
     imgBox.appendChild(addStrong);
@@ -158,15 +158,6 @@ let swiper = new Swiper(".career-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // breakpoints: {
-  //       100:{
-  //         slidesPerView: 1,
-  //         spaceBetween: 0,
-  //       },
-  //       1000: {
-  //         slidesPerView: 1.3,
-  //       },
-  //   },
 });
 
 const btnModalOpen = (select) => {

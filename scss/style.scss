@@ -45,7 +45,7 @@
         position: relative; grid-area: i1; overflow: hidden; margin: -6px; z-index: 1;
         &::before{
           content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 5076px;
-          background: #bb92d4 url(../images/bg/wave.png) center; background-size: auto 300%; background-repeat: repeat-x; 
+          background: $pp url(../images/bg/wave.png) center; background-size: auto 300%; background-repeat: repeat-x; 
           animation: bgMoving-X 100s linear infinite;;
         }
       }
@@ -60,7 +60,7 @@
         &::before{
           content: "";
           position: absolute; left: -7px; top: 0; width: 117%; height: 10000%;
-          background: #90d8cc;
+          background: $mint;
           background-image: radial-gradient(#222 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
           background-position: 0 0, 10px 10px;
           background-size: 20px 20px;
@@ -173,35 +173,35 @@
           &:nth-child(#{$i}){
             @if($i == 2){
               &.active{
-                span::before{background-color: $bl;}
-              }
-              span::before{color: $bl;}
-              &:hover{
-                  color: $bl;
-              }
-            }@else if($i == 3){
-              &.active{
                 span::before{background-color: $pp;}
               }
               span::before{color: $pp;}
               &:hover{
-                color: $pp;
+                  color: $pp;
+              }
+            }@else if($i == 3){
+              &.active{
+                span::before{background-color: $bl;}
+              }
+              span::before{color: $bl;}
+              &:hover{
+                color: $bl;
               }
             }@else if($i == 4){
-              &.active{
-                span::before{background-color: $red;}
-              }
-              span::before{color: $red;}
-              &:hover{
-                color: $red;
-              }
-            }@else if($i == 5){
               &.active{
                 span::before{background-color: $yl;}
               }
               span::before{color: $yl;}
               &:hover{
                 color: $yl;
+              }
+            }@else if($i == 5){
+              &.active{
+                span::before{background-color: $mint;}
+              }
+              span::before{color: $mint;}
+              &:hover{
+                color: $mint;
               }
             }
           }
@@ -222,7 +222,7 @@
       .about-text{
         padding: 40px 40px 60px; background-color: $wh; border: 20px solid $bk;
         h1{
-          display: flex; align-items: center; padding-bottom: 10px; gap: 30px;
+          display: flex; align-items: center; gap: 30px;
           *{ font-size: 20px; font-weight: bold;}
           .br{display: none;}
           .profile{flex-shrink: 0; width: 120px; height: 120px; border: 2px solid $bk; background: $wh url(../images/img/msface.jpg) no-repeat center; background-size: contain;}
@@ -231,7 +231,7 @@
           }
         }
 
-        p{padding-top: 10px; line-height: 1.6; strong{text-decoration: underline;}}
+        p{padding-top: 20px; line-height: 1.6; strong{text-decoration: underline;}}
       }
     }
     .skill-list{
@@ -357,7 +357,18 @@
       height: unset; border-radius: 20px;
       .career-wrap{position: relative; display: flex; align-items: center; justify-content: center; gap: 0 80px; height: 100%; transition: .3s; overflow: hidden; z-index: 1;  transition: .3s;} 
       .img-box{
-        flex: 1; position: relative; padding-top: 30%; width: 100%; background-color: $wh; overflow: hidden; box-shadow: 1px 2px 16px  rgba(255,255,255,.2); background-repeat: repeat; background-size: cover; background-position: top center;
+        flex: 1; position: relative; height: 300px; width: 100%; background-color: $wh; overflow: hidden; box-shadow: 1px 2px 16px  rgba(255,255,255,.2); background-repeat: no-repeat; background-size: cover; background-position: top 18px center; border-radius: 2px 2px 0 0;
+        border: 4px solid #ddd; transition: .3s;
+        &::before{content: ""; display: block; width: 100%; height: 14px; background-color: #ddd; z-index: 3; border-bottom: 4px solid #ddd; transition: .3s}
+        &:hover{
+          border-color: #ccc;
+          &::before{background-color: #ccc; border-color: #ccc;}
+        }
+        > span{
+          display: block;
+          &::before{position: absolute; right: 0; top: -2px;}
+          &::after{content: ""; position: absolute; left: 0; top: 3px; width: 10%; height: 10px; background-color: $wh;}
+        }
         &.allra{background-image: url(../images/site/allra.png);}
         &.kace{background-image: url(../images/site/kace.png);}
         &.dibi{background-image: url(../images/site/dibi.png);}
@@ -367,37 +378,37 @@
       .text-box{
         flex: 1; width: 100%;
         *{color: $wh;}
-        .date{font-size: 12px; padding-bottom:4px; color: $gray;}
         h4{
           font-size: 28px; font-weight: bold; 
           small{display: inline-block; padding-left: 20px;} 
         }
         .desc{padding-top:4px;}
         .label{
-          display: block; padding: 20px 0 6px;
+          display: block; padding: 30px 0 6px;
           &:nth-of-type(2){padding-top: 10px;}
         }
         .tool{
           display: flex; flex-wrap: wrap; gap: 5px 3px;
-          li{font-size: 13px; border: 1px solid $bl; padding: 2px 6px; color: $bl;}
-          li.new{color: #f4c500;}
+          li{font-size: 13px; border: 1px solid rgba(50,190,234,.5); padding: 2px 6px; color: $bl;}
         }
         .link-list{
           gap:0 8px; margin-top: 20px;
           li{
-            flex: 1; background-color: $red; margin: 7px 0; padding: 10px; border-radius: 10px; text-align: center;
-            a{position: relative;}
-            p{ 
-              small{display: block; font-size: 12px;}
+            flex: 1; border:1px solid rgba(50,190,234,.5);  margin: 7px 0; padding: 10px; text-align: center;
+            a{
+              position: relative;
+              *{color: $bl;}
+              &:hover{background-color: $bl; color: $wh;}
             }
+            p{ small{display: block; font-size: 12px; }}
             .xi{display: inline-block; padding-left: 2px; vertical-align: -1px;}
           }
         }
-        .desc{padding-top: 20px; font-size: 14px;}
+        .desc{padding-top: 10px; font-size: 14px;}
         .btw-flex{
           padding-top: 20px; gap: 8px;
-          .btn-detail{margin-top: 20px; width: 100%; line-height: 50px; background-color: $bk; border: 1px solid $wh; text-align: center; transition: .3s;}
-          .btn-detail:hover{background-color: $wh; color: $bk;}
+          .btn-detail{margin-top: 20px; width: 100%; line-height: 50px; background-color: $bk; border: 1px solid rgba(50,190,234,.5); color: $bl; text-align: center; transition: .3s; font-weight: bold;}
+          .btn-detail:hover{background-color: $bl; color: $wh;}
         }
       }
     }
@@ -410,10 +421,13 @@
     display: none; position: fixed; left: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.7); z-index: 100;
     &.active{display:block; animation: opacity .3s both;}
     &.closeAni{ animation: modalClose .3s both;}
-    .modal-inner{position: absolute; left: 50%; bottom: 50%; transform: translate(-50%,50%); width: 100%; max-width: 500px; padding:84px 20px 20px; background-color: $bk;}
+    .modal-inner{position: absolute; left: 50%; bottom: 50%; transform: translate(-50%,50%); width: 100%; max-width: 800px; padding:84px 20px 20px; background-color: $bk;}
     .modal-head{
       position: absolute; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; width: 100%; padding:20px 20px 20px 40px; border-bottom: 2px solid $wh;
-      .tit{color: $wh; font-size: 28px; font-weight: bold;}
+      .tit{
+        color: $wh; font-size: 28px; font-weight: bold;
+        small{display: inline-block; font-size: 12px; padding-left:10px; color: $gray;}
+      }
       .btn-close{
         .xi-close-min{
           position: relative; display: block; width: 30px; height: 30px; font-size: 30px; line-height: 30px; border-radius: 50em; background-color: #fff; 
@@ -425,7 +439,7 @@
       dl{
         padding:12px 0 20px; margin: 4px 0 8px; border-bottom: 1px solid $gray;
         dt{
-          display: inline; font-weight: bold; color: #ddd; @include textLine();
+          display: inline; font-weight: bold; color: #ddd;
           span{display: block; font-size: 12px; color: #ddd; padding-bottom: 4px;}
         }
         dd{
@@ -434,7 +448,7 @@
             display: block; color: $gray; padding-left: 14px; text-indent: -15px; word-break: keep-all;
             &::before{content: "- "; color: inherit;}
           }
-          a{position: absolute; right: 0; top: -19px; color: $yl;}
+          a{position: absolute; right: 0; top: -19px; color: $bl;}
         }
       }
     }
@@ -453,18 +467,15 @@
     0%{transform: translate(-50%,0%);}
     100%{transform: translate(-50%,100%);}
   }
-  @media screen and (max-width:1920px) {
-    .swiper{max-width: calc(100vw - 220px);}
-  }
   @media screen and (max-width:1100px) {
     .inner{
       position: relative;
       .swiper {
-        max-width: calc(100vw - 320px); padding: 0 0 50px;
+        max-width: calc(100vw - 220px); padding: 0 0 50px;
         .career-wrap{
           flex-direction: column;
           .img-box{
-            flex: unset; padding-top: 0; height: 349px; width: 100%; box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
+            flex: unset; padding-top: 0; height: 340px; width: 100%; box-shadow: 1px 2px 16px rgba(255, 255, 255, 0.1);
           }
           .text-box {
             .date{padding-top: 20px;}
@@ -480,18 +491,18 @@
   @media screen and (max-width:1000px) {
     .inner{
       .swiper {
-        max-width: calc(100vw - 200px);
+        max-width: calc(100vw - 120px);
       }
     }
   }
   @media screen and (max-width:760px) {
     .inner{
          .swiper {
-          max-width: calc(100vw - 40px);
+          max-width: calc(100vw - 60px);
           .career-wrap{
             .btw-flex .btn-detail{line-height: 40px;}
             .img-box{
-              min-height: 200px; height: 50vw;
+              min-height: 180px; height: 50vw;
             }
             .text-box h4{
               font-size: 24px;
@@ -528,7 +539,7 @@
 .section4{
   .inner{
     align-items: center; justify-content: center; transition: .3s;
-    &::before{content: ""; position: absolute; left: 0%; top: 50%; transform: translate(-50% , -50%); width: 1500px; height: 1500px; border-radius: 50em; background-color: $red; box-shadow: $boxShadow; transition: .3s; z-index: 0;}
+    &::before{content: ""; position: absolute; left: 0%; top: 50%; transform: translate(-50% , -50%); width: 1500px; height: 1500px; border-radius: 50em; background-color: $yl; box-shadow: $boxShadow; transition: .3s; z-index: 0;}
     &.aos-animate{
       &::before{animation: PcCircleAni .8s .3s both;}
     }
@@ -625,7 +636,7 @@
   position: relative; padding: 100px 20px; text-align: center; overflow: hidden; background-color: $bk;
   .bg-star-wrap {
     position: absolute; left: 0; top: 0; width: 10000%; height: 100%; overflow: hidden; z-index: 0;
-    .star {background-size: auto 100%; background-position: 50% 0; background-repeat: repeat-x; height: 100%; animation: twinkle 10s ease-in -5s infinite alternate, layer 344s linear infinite; background-image: url(../images/img/star1.png) , url(../images/img/star2.png) , url(../images/img/star3.png);
+    .star {background-size: auto 100%; background-position: 50% 0; background-repeat: repeat-x; height: 100%; animation: twinkle 10s ease-in -5s infinite alternate, layer 34s linear infinite; background-image: url(../images/img/star1.png) , url(../images/img/star2.png) , url(../images/img/star3.png);
       &::before {animation: movingStar 3s linear; background-image: url(../images/img/d-star.png); background-size: 72px 50px; content: ' '; height: 50px; left: 80%; position: absolute; top: -50px; width: 72px; z-index: 100;
       }
     }
@@ -633,7 +644,7 @@
   *{color: $wh;}
   > div:not(.bg-star-wrap){position: relative; z-index: 1;}
   .font{font-family: 'Libre Barcode 39','Cabin Sketch','Monoton'; font-size: 80px; color: $yl;}
-  q{display: block; padding: 10px 0; line-height: 1.5;}
+  q{display: block; padding: 10px 0; margin-bottom: 20px; line-height: 1.5;}
   @media screen and (max-width:640px) {
     padding: 60px 20px;
     .font{font-size: 50px;}
