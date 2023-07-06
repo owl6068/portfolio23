@@ -135,7 +135,7 @@
 
 // 사이드바
 .snb{
-  position: fixed; right: -100%; top: 50%; background-color:$bk; z-index: 10; transition: .5s; border-radius: 20px 0 0 20px; box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  position: fixed; right: -100%; top: 50%; background-color:$bk; border: 1px solid rgba(255,255,255,.5); z-index: 10; transition: .5s; border-radius: 20px 0 0 20px;
   &.open{right: 0%;  opacity: 1;}
   &.mo-nav{
     opacity: .5; right: -43px;
@@ -358,7 +358,7 @@
       .career-wrap{position: relative; display: flex; align-items: center; justify-content: center; gap: 0 80px; height: 100%; transition: .3s; overflow: hidden; z-index: 1;  transition: .3s;} 
       .img-box{
         flex: 1; position: relative; height: 300px; width: 100%; background-color: $wh; overflow: hidden; box-shadow: 1px 2px 16px  rgba(255,255,255,.2); background-repeat: no-repeat; background-size: cover; background-position: top 18px center; border-radius: 2px 2px 0 0;
-        border: 4px solid #ddd; transition: .3s;
+        border: 2px solid #ddd; transition: .3s;
         &::before{content: ""; display: block; width: 100%; height: 14px; background-color: #ddd; z-index: 3; border-bottom: 4px solid #ddd; transition: .3s}
         &:hover{
           border-color: #ccc;
@@ -559,7 +559,7 @@
         @for $i from 1 to 4{
           &:nth-child(#{$i}){
             @if($i == 1){
-              .xi{color: $yl;}
+              .xi{color: $mint;}
             }@else if($i == 2){
               .xi{color: $pp;}
             }@else if($i == 3){
@@ -579,7 +579,7 @@
           input{line-height: 40px; padding: 0 20px;}
           textarea{height: 150px; padding: 20px;}
           button{width: 100%; font-weight: 900; color: $wh; background-color: $bk; padding: 15px 0;}
-          .error{display: block; color: $red; font-size: 12px; padding-top: 4px;}
+          .error{display: block; color: red; font-size: 12px; padding-top: 4px;}
           &:first-child{padding-top: 0;}
         }
       }
@@ -642,9 +642,11 @@
   .bg-star-wrap {
     position: absolute; left: 0; top: 0; width: 10000%; height: 100%; overflow: hidden; z-index: 0;
     .star {background-size: auto 100%; background-position: 50% 0; background-repeat: repeat-x; height: 100%; animation: twinkle 10s ease-in -5s infinite alternate, layer 34s linear infinite; background-image: url(../images/img/star1.png) , url(../images/img/star2.png) , url(../images/img/star3.png);
-      &::before {animation: movingStar 3s linear; background-image: url(../images/img/d-star.png); background-size: 72px 50px; content: ' '; height: 50px; left: 80%; position: absolute; top: -50px; width: 72px; z-index: 100;
-      }
+      &::before {content: ' '; position: absolute; top: 0; left: 90vw; width: 72px; height: 50px; z-index: 100; background-image: url(../images/img/d-star.png); background-size: 72px 50px; opacity: 0;}
     }
+  }
+  &.aos-animate{
+  .bg-star-wrap .star::before { animation: movingStar  3s .5s linear;}
   }
   *{color: $wh;}
   > div:not(.bg-star-wrap){position: relative; z-index: 1;}
