@@ -22,7 +22,6 @@ window.addEventListener("scroll", function () {
   AOS.refresh();
 });
 
-mainBgPaintAdd();
 snbView();
 snbHandler();
 snbSectionMoving();
@@ -94,52 +93,6 @@ function snbSectionMoving() {
   });
 }
 
-function mainBgPaintAdd() {
-  let section1 = document.querySelector(".section1");
-  let imgBox = document.querySelector(".section1 .bg-img-box");
-  let bgList = [];
-  let i = 0;
-  for (let i = 1; i < 13; i++) {
-    bgList.push(`/images/bg/b${i}.png`);
-  }
-  let x = section1.clientWidth;
-  let y = section1.clientHeight;
-
-  let setinterval = setInterval(() => {
-    //auto
-    if (i !== bgList.length) {
-      let addSpan = document.createElement("span");
-      addSpan.style.left = Math.floor(Math.random() * x * 1) + "px";
-      addSpan.style.top = Math.floor(Math.random() * y * 1) + "px";
-      let bg = `url(https://owl6068.github.io/msPortFolio/${bgList[i]})`;
-      addSpan.style.backgroundImage = bg;
-      imgBox.appendChild(addSpan);
-      i++;
-    } else {
-      clearInterval(setinterval);
-    }
-  }, 150);
-
-  section1.onclick = function (e) {
-    //click
-    let addStrong = document.createElement("strong");
-    
-    let clickX = e.pageX;
-    let clickY = e.pageY;
-
-    addStrong.style.left = clickX + "px";
-    addStrong.style.top = clickY + "px";
-
-    let bg = `url(https://owl6068.github.io/msPortFolio/${bgList[Math.floor(Math.random() * bgList.length * 1)]})`;
-    addStrong.style.backgroundImage = bg;
-
-    imgBox.appendChild(addStrong);
-
-    setTimeout(() => {
-      addStrong.remove();
-    }, 3000);
-  };
-}
 
 let swiper = new Swiper(".career-swiper", {
   slidesPerView: 1,

@@ -1,0 +1,107 @@
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.btw-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+.hide {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+  opacity: 0.01;
+}
+
+body.overflow {
+  overflow: hidden;
+}
+
+.main {
+  overflow: hidden;
+}
+.main * {
+  font-size: 16px;
+}
+@media screen and (max-width: 760px) {
+  .main * {
+    font-size: 14px;
+  }
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.section:nth-of-type(even) {
+  background-color: #fefefe;
+}
+.section:nth-of-type(even) .tit.font-bold {
+  color: #222;
+}
+.section:nth-of-type(odd) {
+  background-color: #222;
+}
+.section:nth-of-type(odd) .tit.font-bold {
+  color: #fefefe;
+}
+.section .tit.font-bold {
+  font-size: 130px;
+  line-height: 1;
+  padding-bottom: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.section .inner {
+  position: relative;
+  display: flex;
+  align-content: stretch;
+  width: 100%;
+  max-width: 1240px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .section .inner {
+    padding: 50px;
+  }
+  .section .inner .tit.font-bold {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .section .inner {
+    padding: 50px 20px;
+  }
+  .section .inner .tit.font-bold {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section .inner .tit.font-bold {
+    font-size: 60px;
+  }
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #777;
+}
+input::placeholder, textarea::placeholder {
+  color: #777;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #777;
+}/*# sourceMappingURL=common.css.map */

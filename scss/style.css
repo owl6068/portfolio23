@@ -97,11 +97,7 @@ body.overflow {
     font-size: 60px;
   }
 }
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #777;
-}
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: #777;
 }
 input::placeholder, textarea::placeholder {
@@ -1414,6 +1410,4 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     opacity: 0;
     transform: translate3d(-270px, 180px, 0);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
